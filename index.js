@@ -75,6 +75,7 @@ function CemberinAlani(cemberinYaricapi, pi) {
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
+
 /* 	GÖREV 3:
 	- Sayfanın en üstünde global değişken olarak tanımlanmış bir sayilar dizisi bulunmaktadır. Bu dizi içinde 0 ile 1000 arasında rasgele oluşturulmuş tam sayılar ve ondalıklı sayılar bulunmaktadır. Bu diziyi kullanarak aşağıdakileri uygulayın:
 		3a. enbuyuk ve enkucuk isminde 2 adet değişken tanımlayın ve sayilar dizisindeki en küçük sayı ile en büyük sayıyı bu değişkenlere atayın. (for döngüsü kullanın)
@@ -104,27 +105,64 @@ let ucetambolunenler,
 
 // 3a çözümü
 
-/* kodlar buraya */
+let enbuyuk = sayilar[0];
+let enkucuk = sayilar[0];
+
+for (let i = 1; i < sayilar.length; i++) {
+    if (sayilar[i] > enbuyuk) {
+        enbuyuk = sayilar[i];
+    }
+    if (sayilar[i] < enkucuk) {
+        enkucuk = sayilar[i];
+    }
+}
 
 // 3b çözümü:
 
-/* kodlar buraya */
+const ucetambolunenler = [];
+sayilar.forEach(sayi => {
+    if (Number.isInteger(sayi) && sayi % 3 === 0) {
+        ucetambolunenler.push(sayi);
+    }
+});
 
 // 3c çözümü:
 
-/* kodlar buraya */
+const ucebolunenlerintoplami = ucetambolunenler.reduce((toplam, sayi) => toplam + sayi, 0);
+
+console.log("3'e tam bölünen sayıların toplamı:", ucebolunenlerintoplami);
+
 
 // 3d çözümü
 
-/* kodlar buraya */
+const besyuzdenkucuksayilar = sayilar.filter(sayi => sayi < 500);
+
+console.log("500'den küçük sayılar:", besyuzdenkucuksayilar);
+
 
 // 3e çözümü
 
-/* kodlar buraya */
+const siralisayilar = besyuzdenkucuksayilar.sort((a, b) => a - b);
+
+console.log("Sıralı sayılar:", siralisayilar);
+
 
 // 3f çözümü
 
-/* kodlar buraya */
+const tekraredensayilar = [];
+const sayiSayaci = {};
+
+sayilar.forEach(sayi => {
+    sayiSayaci[sayi] = (sayiSayaci[sayi] || 0) + 1;
+});
+
+for (let sayi in sayiSayaci) {
+    if (sayiSayaci[sayi] > 1) {
+        tekraredensayilar.push(`${sayi} sayısı ${sayiSayaci[sayi]} kere tekrar edilmiştir`);
+    }
+}
+
+console.log("Tekrar eden sayılar:", tekraredensayilar);
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
