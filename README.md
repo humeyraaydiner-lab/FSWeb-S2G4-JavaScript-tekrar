@@ -1,42 +1,12 @@
-## JavaScript Tekrar
+# React + Vite
 
-## Amaçlar
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-- JavasScipt'te öğrendiklerimizi kullanmak
+Currently, two official plugins are available:
 
-## Giriş
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Artık çalıştığınız iş yerinde tecrübeli bir çalışan oldunuz. Sizden yeni gelen stajyerlere destek olmanız isteniyor. 
-Siz de çalıştığınız farklı projelerdeki bazı ufak görevlerden hazırladığınız bir projeyi, yeni stajyer arkadaşınızla beraber yaptığınızı hayal edin.
+## Expanding the ESLint configuration
 
-### Commits
-
-Görevleri yaptıkça commit etmeyi unutmayınız.
-
-## Talimatlar
-
-### Görev 1: Proje Kurulumu
-
-VSCode ve Komut Satırını Kullanma:
-
-1. Bu repo'yu fork'layın
-2. Frok'ladığınız repo'yu bilgisayarınızda clone'layın
-3. LÜTFEN BRANCH OLUŞTURMAYINIZ! Bu projede main branch'ine push'layacaksın
-4. Repo'nuzun olduğu klasöre gidin (`cd REPO_ADI`)
-5. Vs code'da terminali açın ve `npm install` yazın ve çalıştırın
-6. Sonra `npm run test` yazın ve çalıştırın
-7. Projenizi tamamladıktan sonra `push` yaparak githuba aktarın
-
-
-### Görev 2: Yapılması gerekenler
-
-`index.js` dosyasını bulun ve verilen görevleri tamamlayın.
-
-
-### Test Etme & Debug Yapma
-
-Projenizin içinde "split terminal"i tıklayarak ikinci bir terminal ekranı açın.
-
-Açılan ikinci terminalde `npm start` yazıp çalıştırın.
-
-Bir terminal ekranında testleri çalıştırırken bir diğerinde ise debug yapabileceksin. Kodlarınızda güncelleme yaptıkça ilerlemeyi kontrol için `console.log`u kullanın.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
