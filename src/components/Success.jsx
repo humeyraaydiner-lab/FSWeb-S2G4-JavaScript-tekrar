@@ -6,4 +6,4 @@ export default function Success() {
       </div>
     );
   }
-  
+  // success dosyasına yorum satırı
